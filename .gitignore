@@ -1,0 +1,37 @@
+# Compiled Python bytecode
+*.py[cod]
+
+# Logs and training outputs
+logs/
+runs/
+wandb/
+
+# Model checkpoints
+*.pt
+
+# Package build artifacts
+*.egg-info/
+__pycache__/
+*/build/
+build/
+
+# Archives
+*.zip
+*.tar.gz
+*.tar
+*.rar
+
+# IDE
+.idea/
+.vscode/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.ipynb
+*.patch
+isolated_run/
+logs_bkp/
