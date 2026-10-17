@@ -55,6 +55,9 @@ joint actions for the 29-DoF Unitree G1.
 from the repository root:
 
 ```bash
+git clone --branch mjlab --single-branch https://github.com/bb0928/FORGE.git
+cd FORGE
+
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
