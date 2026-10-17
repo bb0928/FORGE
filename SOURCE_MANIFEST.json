@@ -1,7 +1,7 @@
 {
   "milestone_date": "2026-08-01",
   "baseline_git_commit": "5e09105",
-  "scope": "Standalone mjlab base policy; training mathematics retained. See RELEASE_NOTES.md for packaging changes.",
+  "scope": "Standalone mjlab base policy; training mathematics retained. See docs/release-notes.md for packaging changes.",
   "original_snapshot": "Working-tree content, including uncommitted milestone files; the commit alone does not recreate it.",
   "files": [
     {

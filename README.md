@@ -1,20 +1,58 @@
-# FORGE mjlab: August 1, 2026 milestone
+<h1 align="center">FORGE</h1>
 
-A standalone 29-DOF G1 base policy for walking, squatting and upper-body target
-tracking, using mjlab / MuJoCo Warp and RSL-RL. This source release preserves the
-August 1 milestone's training implementation and makes its launch configuration
-portable.
+<p align="center">
+  <strong>Force-Aware Multi-Granularity Control for<br>Efficient Humanoid Loco-Manipulation</strong>
+</p>
 
-**Scope:** the mjlab base-policy milestone. This is not the complete Isaac Gym
-FORGE paper implementation, the later force-estimator experiments, or a real-robot
-deployment package. No pretrained checkpoint is included. Training can start from
-scratch; playback requires your own compatible checkpoint.
+<p align="center">
+  <a href="https://bb0928.github.io/forge/">Project Page</a> ·
+  <a href="https://bb0928.github.io/forge/forge-paper.pdf">Paper</a> ·
+  <a href="https://www.bilibili.com/video/BV1qkYa6zEx6/">Video</a> ·
+  <a href="docs/README.md">Documentation</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/mujocolab/mjlab"><img src="https://img.shields.io/badge/Simulator-mjlab-4078c0" alt="Simulator: mjlab"></a>
+  <a href="docs/installation.md"><img src="https://img.shields.io/badge/Python-3.12-3776ab" alt="Python 3.12"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-3d8c6e" alt="License: Apache 2.0"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.bilibili.com/video/BV1qkYa6zEx6/">
+    <img src="media/teaser.png" width="900" alt="FORGE: humanoid locomotion, contact interaction, teleoperation, and manipulation">
+  </a>
+</p>
+
+<p align="center"><em>Whole-body loco-manipulation with FORGE. Click the figure to watch the project video.</em></p>
+
+## Overview
+
+**FORGE** studies humanoid loco-manipulation through a multi-granularity command
+interface, connecting locomotion, end-effector tracking and contact interaction.
+See our [paper](https://bb0928.github.io/forge/forge-paper.pdf) and
+[project page](https://bb0928.github.io/forge/) for the method and experiments.
+
+This repository provides the **mjlab implementation for G1 whole-body policy
+training and simulation**. A single policy learns walking, height control and
+upper-body target tracking from command and proprioceptive histories, producing
+joint actions for the 29-DoF Unitree G1.
+
+- **Whole-body coordination.** Grouped command masks and a temporal policy connect
+  locomotion, squatting and upper-body tracking in one training framework.
+- **Learning from scratch.** PPO training combines an upper-body curriculum,
+  symmetry augmentation, exploration regularization and domain randomization,
+  including independently sampled 0–2 kg hand payloads. No motion-capture dataset
+  is required.
+- **Interactive simulation.** A browser viewer exposes walking and height
+  controls, upper-body target sampling, and target-versus-actual FK overlays.
+
+[Installation](#installation) · [Training](#training) · [Playback](#playback) ·
+[Documentation](#documentation) · [Citation](#citation)
 
 ## Installation
 
-Use Linux, Python 3.12 and an NVIDIA CUDA GPU. The recorded run used **4 GPUs**,
-4,096 environments per GPU and 10,000 training iterations. Other GPU counts or
-environment counts change the total PPO batch and are not equivalent reproductions.
+**Requirements:** Linux, Python 3.12, and an NVIDIA GPU. Run the following commands
+from the repository root:
 
 ```bash
 python3.12 -m venv .venv
@@ -24,144 +62,96 @@ python -m pip install torch==2.7.1 torchvision==0.22.1 --index-url https://downl
 python -m pip install -r requirements.txt
 ```
 
-The dependency pins are a **reconstructed compatibility baseline**, not an archived
-pip freeze from the original training machine. The vendored PPO matches RSL-RL
-5.2.0 plus the FORGE StdL2 changes, and the original G1 XML hash matches mjlab
-1.4.0. Full GPU reproduction remains to be validated; see `VALIDATION.md`.
-Installation uses the public package index and does not need an internal image,
-scheduler, mount, W&B server or account.
-
-## Train
-
-Inspect the exact plan without installing simulator dependencies or starting work:
+Verify the environment:
 
 ```bash
-python scripts/train.py --dry-run
+python scripts/check_runtime.py
 ```
 
-Run the milestone from scratch:
+For setup details, see [Installation](docs/installation.md).
+
+## Training
+
+Train a whole-body policy from scratch:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 python scripts/train.py
 ```
 
-Outputs go to `logs/forge-20260801-s7/`, including `launch.json`, TensorBoard logs
-and checkpoints. A nonempty run directory is rejected to prevent accidental
-overwrites. Choose a new name with `--run-name`. The launcher clears stale
-experiment and distributed-process settings, including `RESUME_CKPT`, before
-applying `configs/milestone.json`.
+The default recipe uses **4 GPUs, 4,096 environments per GPU, 10,000 iterations**
+and seed 7. Checkpoints and TensorBoard logs are saved to
+`logs/forge-20260801-s7/`.
 
-For a short functional smoke test on one GPU:
+For a single-GPU run:
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python scripts/train.py --gpus 1 --smoke --run-name smoke
+CUDA_VISIBLE_DEVICES=0 python scripts/train.py \
+  --gpus 1 --num-envs 512 --iterations 10000 --run-name g1-single-gpu
 ```
 
-This uses 64 environments and two iterations. It checks execution, not policy
-quality or the milestone result. To change resources explicitly:
+Monitor training:
 
 ```bash
-python scripts/train.py --gpus 1 --num-envs 512 --iterations 10000 --run-name single-gpu
+tensorboard --logdir logs
 ```
 
-`--log-root`, `--seed`, `--num-envs`, `--iterations` and `--gpus` are recorded in
-`launch.json`. Outputs and checkpoints are excluded from Git. TensorBoard is the
-default logger; the supplied launchers do not upload data to W&B.
+The [training guide](docs/training.md) covers the configuration, smoke test and
+experiment options. The default recipe is in
+[configs/milestone.json](configs/milestone.json).
 
-## Replay
+## Playback
 
-Supply a compatible checkpoint produced by this base-policy implementation:
+Visualize a trained policy by passing its checkpoint:
 
 ```bash
 python scripts/play.py --checkpoint logs/forge-20260801-s7/model_9999.pt
 ```
 
-Open `http://localhost:8080`. The viewer binds to localhost. For a remote GPU
-machine, forward the port with `ssh -L 8080:localhost:8080 user@gpu-host`.
-The viewer provides walking, height and upper-body curriculum controls, plus FK
-target overlays. The initial curriculum is taken from the checkpoint and bounded
-by the milestone cap of 0.6. Interactive replay disables automatic resets so the
-viewer can be inspected manually; it is not a quantitative benchmark.
+Open **http://localhost:8080** to interact with the controller.
 
-For a finite, headless replay check:
-
-```bash
-python scripts/play.py --checkpoint logs/smoke/model_1.pt --headless --steps 300
-```
-
-Headless replay retains environment termination/reset rules, rejects non-finite
-actions/rewards and prints `HEADLESS_REPLAY_OK` on completion. Default replay
-disables training randomization and observation noise; pass `--randomization` to
-enable them. `--device cuda:N` selects a visible GPU. Checkpoints are loaded with
-PyTorch serialization and must come from a trusted source.
-
-## Milestone configuration
-
-| Setting | Value |
+| Control | Function |
 |---|---|
-| Robot | G1, 29 controlled joints; fixed Dex3-1 fingers |
-| Hand asset | `dex31_payload` |
-| Additional payload mass | Independently randomized 0–2 kg per hand at startup |
-| Domain randomization | Enabled; conservative physical, gain, delay and observation randomization |
-| Command mixture | Walking / position / force-mode masks: 0.8 / 0.1 / 0.1 |
-| Upper-body curriculum | 0 → 0.6, increment 0.05 |
-| Pose guard | Upper body only; weight -0.25; starts at iteration 1000 |
-| Pose-guard thresholds | Warning 0.65, danger 0.80, danger scale 3.0 |
-| Seed | 7 |
-| Rollout | 24 steps per environment |
-| PPO | 5 epochs, 4 minibatches, adaptive learning rate starting at 1e-3 |
-| Symmetry | Data augmentation and mirror loss, coefficient 1e-3 |
-| StdL2 | Repository-local PPO implementation, maximum coefficient 0.02 |
+| Walking | Forward, lateral and turning velocity sliders |
+| Height | Squatting and standing height commands |
+| Upper-body curriculum | Upper-body target range |
+| FK overlay | Target and actual wrist/elbow positions |
 
-The force-mode mask in this base-policy command sampler does **not** establish
-validated force estimation or closed-loop force control. Those experiments are
-outside this release.
+The viewer starts in manipulation mode. Uncheck `force manip (squat enabled)` to
+use the walking sliders; leave it checked to adjust height.
 
-The actor consumes six frames of 131 values plus six 11-group masks: **852 values**.
-The critic consumes one 156-value privileged frame plus a 17-group mask:
-**173 values**. The actor outputs the full 29-joint action, and mjlab applies its
-per-joint action scales and default offsets exactly once. There is no frozen-base
-plus residual composition in this training entry point.
-
-## Tests and provenance
+For playback without a browser:
 
 ```bash
-python -m unittest discover -s tests -v
-python scripts/check_runtime.py
-sha256sum -c SHA256SUMS
+python scripts/play.py \
+  --checkpoint logs/forge-20260801-s7/model_9999.pt --headless --steps 300
 ```
 
-Launcher/resource tests use the Python standard library. Neural checks require
-PyTorch; XML compilation requires MuJoCo. Without these packages those tests are
-explicitly skipped. For CPU-only checks on macOS or Linux, install
-`torch==2.7.1` and `mujoco==3.8.0` in a separate environment; GPU execution is still
-required to validate the released training/replay path.
+See [Playback](docs/playback.md) for the complete controls and remote viewing.
 
-`SOURCE_MANIFEST.json` records original and release SHA256 hashes. Rewards, the
-runner, robot XML and network code were retained; the training entry point has
-portable path/logging changes. See `RELEASE_NOTES.md` for the exact scope and
-`VALIDATION.md` for completed checks and remaining limits.
+## Documentation
 
-## Layout
+| Guide | Contents |
+|---|---|
+| [Installation](docs/installation.md) | Environment setup and troubleshooting |
+| [Training](docs/training.md) | Configuration, resource options and outputs |
+| [Playback](docs/playback.md) | Interactive controls and headless simulation |
+| [Method and code](docs/method.md) | Policy architecture, observations and code structure |
 
-```text
-configs/milestone.json       Recorded launch settings
-scripts/train.py             Portable single-machine torchrun launcher
-scripts/play.py              Interactive/headless replay launcher
-scripts/check_runtime.py     Dependency, CUDA and asset preflight
-train_forge_base.py          Environment, rewards and training configuration
-play_base.py                 Viewer and finite replay implementation
-commands.py                 Mixed commands and FK target curriculum
-obs_spec.py / obs_builder.py Observation layouts and history
-rl/                         Networks, runner and vendored StdL2 PPO
-assets/                     Milestone robot XML and its 49 referenced meshes
-tests/                      Launcher, resource and neural contract checks
-```
+## Citation
 
-## License and attribution
+If you use FORGE in your research, please cite our work. The manuscript and its
+BibTeX are available on the [project page](https://bb0928.github.io/forge/#bibtex).
 
-FORGE contributions in this release are provided under Apache-2.0. Third-party
-components retain their own notices and terms: RSL-RL's vendored PPO is
-BSD-3-Clause, and Unitree robot resources retain Unitree's BSD-3-Clause notice.
-See `NOTICE`, `THIRD_PARTY_NOTICES.md` and `LICENSES/` for source versions and
-license text.
+## Acknowledgements
+
+Our implementation builds on [mjlab](https://github.com/mujocolab/mjlab),
+[MuJoCo Warp](https://github.com/google-deepmind/mujoco_warp) and
+[RSL-RL](https://github.com/leggedrobotics/rsl_rl). Robot resources originate from
+[Unitree](https://github.com/unitreerobotics/unitree_ros). We thank the authors and
+maintainers for their contributions to the robotics community.
+
+## License
+
+FORGE contributions are licensed under [Apache-2.0](LICENSE). Third-party code
+and robot resources retain their original licenses; see
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
