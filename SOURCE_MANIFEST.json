@@ -1,0 +1,343 @@
+{
+  "milestone_date": "2026-08-01",
+  "baseline_git_commit": "5e09105",
+  "scope": "Standalone mjlab base policy; training mathematics retained. See RELEASE_NOTES.md for packaging changes.",
+  "original_snapshot": "Working-tree content, including uncommitted milestone files; the commit alone does not recreate it.",
+  "files": [
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_index_0_link.STL",
+      "original_sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892",
+      "release_sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_index_1_link.STL",
+      "original_sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06",
+      "release_sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_middle_0_link.STL",
+      "original_sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892",
+      "release_sha256": "6b35f2f77211d5a366f0b9a4e47c4ee35e536731266f1a34e9efa12db579b892"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_middle_1_link.STL",
+      "original_sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06",
+      "release_sha256": "9e315ebc8a7a0cb98e033985b586b20d81cf8aa761181ae61ce56fcb14077a06"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_palm_link.STL",
+      "original_sha256": "23a486b75bd78a9bf03cec25d84d87f97f3dae038cf21a743b6d469b337e4004",
+      "release_sha256": "23a486b75bd78a9bf03cec25d84d87f97f3dae038cf21a743b6d469b337e4004"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_thumb_0_link.STL",
+      "original_sha256": "a90c721661c0622685488a3c74d1e122c7da89242d3a1daef75edb83422d05e0",
+      "release_sha256": "a90c721661c0622685488a3c74d1e122c7da89242d3a1daef75edb83422d05e0"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_thumb_1_link.STL",
+      "original_sha256": "445c54a45bc13ce36001556f66bc0f49c83cb40321205ae4d676bb2874325684",
+      "release_sha256": "445c54a45bc13ce36001556f66bc0f49c83cb40321205ae4d676bb2874325684"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/left_hand_thumb_2_link.STL",
+      "original_sha256": "3d8dbe5085acfc213d21aa8b0782e89cd79084e9678f3a85fc7b04a86b029db5",
+      "release_sha256": "3d8dbe5085acfc213d21aa8b0782e89cd79084e9678f3a85fc7b04a86b029db5"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_index_0_link.STL",
+      "original_sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d",
+      "release_sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_index_1_link.STL",
+      "original_sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d",
+      "release_sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_middle_0_link.STL",
+      "original_sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d",
+      "release_sha256": "12ab4300c95e437e834f9aef772b3b431c671bf34338930b52ad11aef73bbd0d"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_middle_1_link.STL",
+      "original_sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d",
+      "release_sha256": "c9c34efce4563cacdcfd29fc838a982976d40f5442c71219811dcbbf3923a33d"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_palm_link.STL",
+      "original_sha256": "86c0b231cc44477d64a6493e5a427ba16617a00738112dd187c652675b086fb9",
+      "release_sha256": "86c0b231cc44477d64a6493e5a427ba16617a00738112dd187c652675b086fb9"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_thumb_0_link.STL",
+      "original_sha256": "544298d0ea1088f5b276a10cc6a6a9e533efdd91594955fdc956c46211d07f83",
+      "release_sha256": "544298d0ea1088f5b276a10cc6a6a9e533efdd91594955fdc956c46211d07f83"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_thumb_1_link.STL",
+      "original_sha256": "0a9a820da8dd10f298778b714f1364216e8a5976f4fd3a05689ea26327d44bf6",
+      "release_sha256": "0a9a820da8dd10f298778b714f1364216e8a5976f4fd3a05689ea26327d44bf6"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/dex31/right_hand_thumb_2_link.STL",
+      "original_sha256": "3f1bfb37668e8f61801c8d25f171fa1949e08666be86c67acad7e0079937cc45",
+      "release_sha256": "3f1bfb37668e8f61801c8d25f171fa1949e08666be86c67acad7e0079937cc45"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/head_link.STL",
+      "original_sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411",
+      "release_sha256": "005fb67fbd3eff94aa8bf4a6e83238174e9f91b6721f7111594322f223724411"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_ankle_pitch_link.STL",
+      "original_sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d",
+      "release_sha256": "d49e3abc6f5b12e532062cd575b87b5ef40cd2a3fc18f54a1ca5bba4f773d51d"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_ankle_roll_link.STL",
+      "original_sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f",
+      "release_sha256": "c4092af943141d4d9f74232f3cfa345afc6565f46a077793b8ae0e68b39dc33f"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_elbow_link.STL",
+      "original_sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3",
+      "release_sha256": "fa752198accd104d5c4c3a01382e45165b944fbbc5acce085059223324e5bed3"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_hip_pitch_link.STL",
+      "original_sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4",
+      "release_sha256": "4725168105ee768ee31638ef22b53f6be2d7641bfd7cfefe803488d884776fa4"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_hip_roll_link.STL",
+      "original_sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf",
+      "release_sha256": "91f25922ee8a7c3152790051bebad17b4d9cd243569c38fe340285ff93a97acf"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_hip_yaw_link.STL",
+      "original_sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b",
+      "release_sha256": "a16d88aa6ddac8083aa7ad55ed317bea44b1fa003d314fba88965b7ed0f3b55b"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_knee_link.STL",
+      "original_sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477",
+      "release_sha256": "8d92b9e3d3a636761150bb8025e32514c4602b91c7028d523ee42b3e632de477"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_shoulder_pitch_link.STL",
+      "original_sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52",
+      "release_sha256": "f0d1cfd02fcf0d42f95e678eeca33da3afbcc366ffba5c052847773ec4f31d52"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_shoulder_roll_link.STL",
+      "original_sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88",
+      "release_sha256": "fb9df21687773522598dc384f1a2945c7519f11cbc8bd372a49170316d6eee88"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_shoulder_yaw_link.STL",
+      "original_sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e",
+      "release_sha256": "1aa97e9748e924336567992181f78c7cd0652fd52a4afcca3df6b2ef6f9e712e"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_wrist_pitch_link.STL",
+      "original_sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9",
+      "release_sha256": "b251d8e05047f695d0f536cd78c11973cfa4e78d08cfe82759336cc3471de3a9"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_wrist_roll_link.STL",
+      "original_sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c",
+      "release_sha256": "edc387c9a0ba8c2237e9b296d32531426fabeb6f53e58df45c76106bca74148c"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/left_wrist_yaw_link.STL",
+      "original_sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b",
+      "release_sha256": "83f8fb3a726bf9613d65dd14f0f447cb918c3c95b3938042a0c9c09749267d3b"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/logo_link.STL",
+      "original_sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b",
+      "release_sha256": "8571a0a19bc4916fa55f91449f51d5fdefd751000054865a842449429d5f155b"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/pelvis.STL",
+      "original_sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31",
+      "release_sha256": "5ba6bbc888e630550140d3c26763f10206da8c8bd30ed886b8ede41c61f57a31"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/pelvis_contour_link.STL",
+      "original_sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420",
+      "release_sha256": "5cc5c2c7a312329e3feeb2b03d3fc09fc29705bd01864f6767e51be959662420"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_ankle_pitch_link.STL",
+      "original_sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9",
+      "release_sha256": "15be426539ec1be70246d4d82a168806db64a41301af8b35c197a33348c787a9"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_ankle_roll_link.STL",
+      "original_sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5",
+      "release_sha256": "4b66222ea56653e627711b56d0a8949b4920da5df091da0ceb343f54e884e3a5"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_elbow_link.STL",
+      "original_sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab",
+      "release_sha256": "1be925d7aa268bb8fddf5362b9173066890c7d32092c05638608126e59d1e2ab"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_hip_pitch_link.STL",
+      "original_sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6",
+      "release_sha256": "e4f3c99d7f4a7d34eadbef9461fc66e3486cb5442db1ec50c86317d459f1a9c6"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_hip_roll_link.STL",
+      "original_sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6",
+      "release_sha256": "4c254ef66a356f492947f360dd931965477b631e3fcc841f91ccc46d945d54f6"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_hip_yaw_link.STL",
+      "original_sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668",
+      "release_sha256": "e479c2936ca2057e9eb2f7dff6c189b7419d7b8484dea0b298cbb36a2a6aa668"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_knee_link.STL",
+      "original_sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8",
+      "release_sha256": "63c4008449c9bbe701a6e2b557b7a252e90cf3a5abcf54cee46862b9a69f8ec8"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_shoulder_pitch_link.STL",
+      "original_sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02",
+      "release_sha256": "24cdb387e0128dfe602770a81c56cdce3a0181d34d039a11d1aaf8819b7b8c02"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_shoulder_roll_link.STL",
+      "original_sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81",
+      "release_sha256": "962b97c48f9ce9e8399f45dd9522e0865d19aa9fd299406b2d475a8fc4a53e81"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_shoulder_yaw_link.STL",
+      "original_sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5",
+      "release_sha256": "a0b76489271da0c72461a344c9ffb0f0c6e64f019ea5014c1624886c442a2fe5"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_wrist_pitch_link.STL",
+      "original_sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477",
+      "release_sha256": "d22f8f3b3127f15a63e5be1ee273cd5075786c3142f1c3d9f76cbf43d2a26477"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_wrist_roll_link.STL",
+      "original_sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f",
+      "release_sha256": "a7ee9212ff5b94d6cb7f52bb1bbf3f352194d5b598acff74f4c77d340c5b344f"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/right_wrist_yaw_link.STL",
+      "original_sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6",
+      "release_sha256": "bc9dece2d12509707e0057ba2e48df8f3d56db0c79410212963a25e8a50f61a6"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/torso_link_rev_1_0.STL",
+      "original_sha256": "11ddb46f2098efbbd8816b1d65893632d8e78be936376c7cdcd6771899ccc723",
+      "release_sha256": "11ddb46f2098efbbd8816b1d65893632d8e78be936376c7cdcd6771899ccc723"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/waist_roll_link_rev_1_0.STL",
+      "original_sha256": "b67c347a05abc3e8ddae600d98a082bee273bb39f8e651647708b0a7140a8a97",
+      "release_sha256": "b67c347a05abc3e8ddae600d98a082bee273bb39f8e651647708b0a7140a8a97"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/assets/waist_yaw_link_rev_1_0.STL",
+      "original_sha256": "ec6db442b11f25eed898b5add07940c85d804f300de24dcbd264ccd8be7d554c",
+      "release_sha256": "ec6db442b11f25eed898b5add07940c85d804f300de24dcbd264ccd8be7d554c"
+    },
+    {
+      "path": "assets/g1_xhand/xmls/g1_dex31_payload.xml",
+      "original_sha256": "11a82cd55d32a6c6cf56b2220af64e347b7ac2f1af0dffbae0b098409583967e",
+      "release_sha256": "11a82cd55d32a6c6cf56b2220af64e347b7ac2f1af0dffbae0b098409583967e"
+    },
+    {
+      "path": "commands.py",
+      "original_sha256": "dd86800050e646e3ecd8d2cde3f0c9a2713693dbd5c3f3140ed11fca8c30f3c0",
+      "release_sha256": "dd86800050e646e3ecd8d2cde3f0c9a2713693dbd5c3f3140ed11fca8c30f3c0"
+    },
+    {
+      "path": "forge_symmetry_func.py",
+      "original_sha256": "8881aa5cdb63c04b36e8d17acb9d43ab8f6303b03d8e35f98dd5b814956774c3",
+      "release_sha256": "8881aa5cdb63c04b36e8d17acb9d43ab8f6303b03d8e35f98dd5b814956774c3"
+    },
+    {
+      "path": "obs_builder.py",
+      "original_sha256": "ae7ae85702d3754f34b814364532a9221726f51d902a025b0fb15ddc8d3e3e3a",
+      "release_sha256": "ae7ae85702d3754f34b814364532a9221726f51d902a025b0fb15ddc8d3e3e3a"
+    },
+    {
+      "path": "obs_spec.py",
+      "original_sha256": "5982afa0abb85beccf56e3e058bfe08e67049cca2e41cd904216f4fbc83c303c",
+      "release_sha256": "5982afa0abb85beccf56e3e058bfe08e67049cca2e41cd904216f4fbc83c303c"
+    },
+    {
+      "path": "play_base.py",
+      "original_sha256": "1f7f297c0ad4cc5381b3543032874467eef48a23d98875b844e62d8ea25cfb8c",
+      "release_sha256": "da7d1df97d459f5c32074012f7c1ffeb21e3c2a0a455ab231a7f3a7b648ce731"
+    },
+    {
+      "path": "rewards.py",
+      "original_sha256": "c945e8ac70423d3687f9c4c7f5e293ff4a6297167e58557c2b674d2db7924ea1",
+      "release_sha256": "c945e8ac70423d3687f9c4c7f5e293ff4a6297167e58557c2b674d2db7924ea1"
+    },
+    {
+      "path": "rl/__init__.py",
+      "original_sha256": "f2eb2db3ae11874e7f8b70603a6cdf686c6362d10f972ad6d13410dfdcd0bce0",
+      "release_sha256": "f2eb2db3ae11874e7f8b70603a6cdf686c6362d10f972ad6d13410dfdcd0bce0"
+    },
+    {
+      "path": "rl/base_actor_critic.py",
+      "original_sha256": "69d2678cac28047744e0fbdbe9ba449c79f0fe9a8b26ab70f2c2e783805f7959",
+      "release_sha256": "69d2678cac28047744e0fbdbe9ba449c79f0fe9a8b26ab70f2c2e783805f7959"
+    },
+    {
+      "path": "rl/forge_model.py",
+      "original_sha256": "79e76186e1c10fe1ff7ed2c0198f5dc8912ca62a05b4c3dcdc792233fcc4ee98",
+      "release_sha256": "79e76186e1c10fe1ff7ed2c0198f5dc8912ca62a05b4c3dcdc792233fcc4ee98"
+    },
+    {
+      "path": "rl/forge_runner.py",
+      "original_sha256": "67c366e72298bf5459414dd08d73e9ad8ad056170b0de396dd2aef4f046adae2",
+      "release_sha256": "67c366e72298bf5459414dd08d73e9ad8ad056170b0de396dd2aef4f046adae2"
+    },
+    {
+      "path": "rl/normalizer.py",
+      "original_sha256": "64cbd6e913916a3510a9527dc0ee4375be4900d120d7737b33cc111cdf1fa473",
+      "release_sha256": "64cbd6e913916a3510a9527dc0ee4375be4900d120d7737b33cc111cdf1fa473"
+    },
+    {
+      "path": "rl/obs_encoder.py",
+      "original_sha256": "7789e0a156f7211753b290812a59533d2baf38375bbeabc4a7361c1acd2ebe19",
+      "release_sha256": "7789e0a156f7211753b290812a59533d2baf38375bbeabc4a7361c1acd2ebe19"
+    },
+    {
+      "path": "rl/std_l2_ppo.py",
+      "original_sha256": "617a7319fbd6c7bc7c0f34d03eb9a5b96b8b3be34c2f42a02f79cdd84882d72b",
+      "release_sha256": "617a7319fbd6c7bc7c0f34d03eb9a5b96b8b3be34c2f42a02f79cdd84882d72b"
+    },
+    {
+      "path": "rl/transformer_v2.py",
+      "original_sha256": "09fc9edccdc2918d8b83d51024af42e174e4f7bd632b8ddafc7a321298b47713",
+      "release_sha256": "09fc9edccdc2918d8b83d51024af42e174e4f7bd632b8ddafc7a321298b47713"
+    },
+    {
+      "path": "rl/wrist_fk.py",
+      "original_sha256": "1c77ffb7fcec7449265775405154b6dbe442263172b570de4d8cdbebff184265",
+      "release_sha256": "1c77ffb7fcec7449265775405154b6dbe442263172b570de4d8cdbebff184265"
+    },
+    {
+      "path": "symmetry_v3.py",
+      "original_sha256": "3fe3be1fc17edc9e78635449715c059f53aa1296c82c157fa2cfadf39b574369",
+      "release_sha256": "3fe3be1fc17edc9e78635449715c059f53aa1296c82c157fa2cfadf39b574369"
+    },
+    {
+      "path": "train_forge_base.py",
+      "original_sha256": "74d115e9f9e8325bc8194df65dea52fd497a2d24a91e170007850e851253fa92",
+      "release_sha256": "6f4f679cb26640c2334b5f4595e698bfac8d9d942a21a4008767b0432bf14aeb"
+    }
+  ]
+}

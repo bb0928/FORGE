@@ -1,0 +1,17 @@
+# Reconstructed compatibility baseline, not an archived August 1 pip freeze.
+# Install the CUDA-enabled PyTorch build for your driver first (see README).
+torch==2.7.1
+torchvision==0.22.1
+mjlab==1.4.0
+rsl-rl-lib==5.2.0
+mujoco==3.8.0
+mujoco-warp==3.8.0.3
+warp-lang==1.12.0
+numpy==2.2.6
+scipy==1.15.3
+tensordict==0.14.3
+viser==1.1.1
+mjviser==0.0.14
+tensorboard==2.21.0
+tyro==1.0.16
+trimesh==5.1.1

@@ -1,0 +1,24 @@
+{
+  "name": "FORGE mjlab 2026-08-01 milestone",
+  "gpus": 4,
+  "environment": {
+    "NUM_ENVS": "4096",
+    "MAX_ITER": "10000",
+    "SEED": "7",
+    "FORGE_HAND_ASSET": "dex31_payload",
+    "FORGE_HAND_PAYLOAD_MAX_KG": "2.0",
+    "ENABLE_DOMAIN_RAND": "1",
+    "FORGE_CURRICULUM_MAX": "0.6",
+    "FORGE_POSE_GUARD_WEIGHT": "-0.25",
+    "FORGE_POSE_GUARD_WARN": "0.65",
+    "FORGE_POSE_GUARD_DANGER": "0.80",
+    "FORGE_POSE_GUARD_DANGER_SCALE": "3.0",
+    "FORGE_POSE_GUARD_UPPER_ONLY": "1",
+    "FORGE_POSE_GUARD_EXCLUDE_SQUAT_CHAIN": "0",
+    "FORGE_POSE_GUARD_DISABLE_DURING_SQUAT": "0",
+    "FORGE_POSE_GUARD_START_ITER": "1000",
+    "USE_SYMMETRY": "1",
+    "SYMMETRY_COEF": "0.001",
+    "WRIST_TRACKING_TERMINATION": "0"
+  }
+}

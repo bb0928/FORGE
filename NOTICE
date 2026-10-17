@@ -1,0 +1,7 @@
+FORGE mjlab August 1, 2026 milestone source release
+Copyright 2026 FORGE contributors.
+
+This release includes modified software and robot resources derived from mjlab,
+RSL-RL and Unitree Robotics. Original copyright notices and license texts are
+preserved in source headers and LICENSES/. The release's top-level Apache-2.0
+license does not replace the licenses of third-party components.
