@@ -19,7 +19,7 @@
 
 <p align="center">
   <a href="https://www.bilibili.com/video/BV1qkYa6zEx6/">
-    <img src="media/teaser.png" width="900" alt="FORGE: humanoid locomotion, contact interaction, teleoperation, and manipulation">
+    <img src="media/teaser_v12.png" width="900" alt="FORGE: loco-manipulation, task-space tracking, contact adaptation, and force estimation">
   </a>
 </p>
 

@@ -1,6 +1,8 @@
 # Media
 
-`teaser.png` is the original FORGE project figure from
-[bb0928.github.io/forge](https://bb0928.github.io/forge/), reused without
-modification. The associated project video is on
+`teaser_v12.png` is the FORGE v12 project teaser (box-centered version),
+covering loco-manipulation, task-space tracking, contact adaptation and force
+estimation. It is used without modification.
+
+The project demonstration is on
 [Bilibili](https://www.bilibili.com/video/BV1qkYa6zEx6/).
